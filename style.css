@@ -456,6 +456,7 @@ html, body {
     min-height: 70vh;
     background-color: #151515;
     position: relative;
+    padding-top: 5vw;
 }
 .elem {
     white-space: nowrap;
@@ -602,6 +603,83 @@ html, body {
 
 @media(max-width: 600px) {
     
+/* ---------------- Loader ---------------- */
+#loader {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    padding: 12vw 5vw;
+    font-family: plain light;
+    text-transform: uppercase;
+    position: fixed;
+    z-index: 999999;
+    /* display: none; */
+}
+#loader h1 {
+    font-weight: 600;
+}
+#line {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1vw;
+    /* background-color: red; */
+    width: 100%;
+}
+#line:nth-child(1) {
+    margin-top: 50vw;
+}
+#line h1 {
+    font-size: 7.5vw;
+    font-weight: 900;
+}
+
+/* ---------------- Timer ---------------- */
+#timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    padding: 0vw;
+    font-family: silk;
+    width: 18vw;
+    font-size: 3vw;
+}
+#timer h2 {
+    font-weight: 200;
+}
+#change {
+    /* margin-left: 1vw; */
+    animation: anime9 1s infinite;
+    height: 7vw;
+    font-size: 5.5vw;
+}
+@keyframes anime9{
+    0% {
+        font-family: plain light;
+        -webkit-text-stroke: 1px white;
+        color: white;
+        opacity: 1;
+    }
+    48% {
+        -webkit-text-stroke: 1px transparent;
+        color: transparent;
+        opacity: 0;
+    }
+    50% {
+        font-family: silk;
+        -webkit-text-stroke: 1px white;
+        color: white;
+        opacity: 1;
+    }
+    100% {
+        -webkit-text-stroke: 1px transparent;
+        color: transparent;
+        opacity: 0;
+    }
+}
+
 #page1 {
     width: 100vw;
     height: 60vh;
@@ -671,7 +749,7 @@ html, body {
 
 #page2 {
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     /* background-color: red; */
     padding-top: 10vw;
     /* position: relative; */
@@ -725,6 +803,7 @@ html, body {
     min-height: 100vh;
     /* background-color: red; */
     font-family: plain light;
+    padding-bottom: 50vw;
 }
 #page3 > h1 {
     width: 100vw;
@@ -793,7 +872,7 @@ html, body {
     min-height: 100vh;
     /* background-color: red; */
     padding: 3vw;
-    margin-top: 10vw;
+    /* margin-top: 10vw; */
 }
 #page4-content {
     width: 90%;
@@ -807,7 +886,7 @@ html, body {
     font-size: 5vw;
     position: absolute;
     left: 1%;
-    top: -7%;
+    top: -2.5%;
     font-weight: normal;
 }
 .linee {
@@ -961,7 +1040,8 @@ html, body {
 /* ---------------- Footer ---------------- */
 #footer{
     background-color: #151515;
-    padding-top: 20vw;
+    padding-top:40vw;
+    padding-bottom: 5vw;
 }
 .footer-content {
     margin-left: 4vw;  
@@ -982,7 +1062,7 @@ html, body {
     font-size: 5vw;
     position: absolute;
     left: 4%;
-    bottom: 13.2%;
+    bottom: 4.5%;
     font-weight: normal;
 }
 #texth1{
